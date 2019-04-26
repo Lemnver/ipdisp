@@ -1,0 +1,21 @@
+This document is for planning the program and documenting the function of code
+
+server
+    Code to run on host pc.
+    Waits for arduino to connect, then looks up ip through curl and icanhazip.com and sends to arduino
+
+    written in python using the pyusb library
+
+    todo:
+        how to write daemon
+        how to use pyusb
+
+
+client
+    Code to run on arduino or whatever compatible hardware
+
+    todo:
+        how to hook up LCD to arduino
+        how to display stuff on LCD display
+        how to communicate over USB
+
