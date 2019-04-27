@@ -24,6 +24,8 @@ def get_ip():
     return ip
 
 def checkArduino():
+    path = '/dev/ttyACM0'
+    baud = 9600
     try:
         arduino = serial.Serial(path, baud, timeout=10)
     except Exception as e:
