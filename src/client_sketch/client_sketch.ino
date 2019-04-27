@@ -13,9 +13,12 @@ void setup(){
 }
 void loop(){
   if (Serial.available() > 0) {
+    lcd.clear();
+    lcd.print("reading");
     char c = Serial.read();
+    Serial.write(c);
     sentString += c;
-    if (sentString.length() == 15){
+    if (c == 'e'){
       lcd.clear();
       lcd.print(sentString);
       sentString == "";

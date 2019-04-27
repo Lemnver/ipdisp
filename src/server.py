@@ -33,7 +33,7 @@ def checkArduino():
     print("arduino connected")
     time.sleep(2)
     ip = get_ip()
-    arduino.write(get_ip().encode('ascii'))
+    arduino.write((get_ip()+"e").encode('ascii'))
     time.sleep(1)
     
     # loop untill arduino is disconnected
